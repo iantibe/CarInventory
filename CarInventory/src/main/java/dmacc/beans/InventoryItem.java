@@ -74,10 +74,4 @@ public class InventoryItem {
 				+ ", previousOwner=" + previousOwner + ", car=" + car + "]";
 	}
 		
-	
-	
-
-	
-	
-	
 }

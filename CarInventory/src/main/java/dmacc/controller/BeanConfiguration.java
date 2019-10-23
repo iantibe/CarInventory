@@ -13,7 +13,7 @@ public class BeanConfiguration {
 	public Car car() {
 		Car bean = new Car();
 		bean.setPrice(23000);
-		bean.setCurrentOdometerMiles(97);
+		bean.setCurrentOdometerMiles(97000);
 		bean.setDamaged(false);
 		bean.setMake("VolksWagen");
 		bean.setModel("Jetta");

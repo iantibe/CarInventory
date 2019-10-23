@@ -67,8 +67,4 @@ public class Car {
 				+ currentOdometerMiles + ", price=" + price + ", isDamaged=" + isDamaged + "]";
 	}
 	
-	
-	
-	
-	
 }

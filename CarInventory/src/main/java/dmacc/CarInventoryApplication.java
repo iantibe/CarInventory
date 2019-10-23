@@ -1,5 +1,7 @@
 package dmacc;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -24,19 +26,25 @@ public class CarInventoryApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-		
+				
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-
+		
+		// get beans
 		InventoryItem c = appContext.getBean("inventoryitem", InventoryItem.class);
 		Car car = appContext.getBean("car", Car.class);
 		
+		//assign object car to InventoryItem c
 		c.setCar(car);
 		
+		//save
 		repo.save(c);
 		
-		
-		
+		//print to screen
+		List<InventoryItem> allMyContacts = repo.findAll();
+		for(InventoryItem people: allMyContacts) {
+			System.out.println(people.toString());	
+}
+
 	}
 
 }
